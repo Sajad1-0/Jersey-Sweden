@@ -17,7 +17,7 @@ header {
     left: 0;
     width: 100%; /* header takes up all width in the page */
     padding: 40px; /* gets some space inside its container */
-    z-index: 1000; /* gets priority and overcome other elements */
+    z-index: 1; /* gets priority and overcome other elements */
     display: flex; 
     justify-content: space-between;
     align-items: center;
@@ -273,5 +273,66 @@ header .logga:hover,
     }
     
     
+}
+
+/* Editing the league page */
+.leagues {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative; 
+    top: 200px;
+    left: 400px;
+    padding: 40px; 
+    height: 700px;
+    width: 60%;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.leagues a {
+    text-decoration: none;
+    color: #2a86ff;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bolder;
+    border-radius: 50%;
+}
+
+.leagues a:hover {
+    font-size: 1.2rem;
+    letter-spacing: 5px;  
+    color: #fff;
+}
+
+.leagues a img {
+    border-radius: 50%;
+}
+
+.ligor:nth-child(1) {
+    position: absolute;
+    top: 5%;
+}
+
+.ligor:nth-child(2) {
+    position: absolute;
+    top: 5%;
+    left: 35%;
+}
+.ligor:nth-child(3) {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+.ligor:nth-child(4) {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+
+}
+.ligor:nth-child(5) {
+    position: absolute;
+    top: 50%;
+    right: 20%;
 }
 
