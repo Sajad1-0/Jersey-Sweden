@@ -236,6 +236,8 @@ header .logga:hover,
         position: relative;
         right: 390px;  
     }
+
+    
 }
 /* Home page design for mobile phones */
 @media (max-width: 600px) {
@@ -282,26 +284,28 @@ header .logga:hover,
     align-items: center; 
     position: relative; 
     top: 200px;
-    left: 400px;
+    left: 350px;
     padding: 40px; 
     height: 700px;
     width: 60%;
     overflow: hidden;
-    z-index: 3;
+    z-index: 2;
 }
 
 .leagues a {
     text-decoration: none;
-    color: #2a86ff;
+    color: #111315;
     line-height: 30px;
     text-align: center;
+    font-size: 24px;
     font-weight: bolder;
     border-radius: 50%;
+    
 }
 
 .leagues a:hover {
-    font-size: 1.2rem;
-    letter-spacing: 5px;  
+    font-size: 1.2em; /* 1.2em bigger than the parent element  */
+    letter-spacing: 4px;  
     color: #fff;
 }
 
@@ -336,3 +340,43 @@ header .logga:hover,
     right: 20%;
 }
 
+@media (max-width: 1062px) {
+    .leagues {
+        height: 100vh;
+        border: 2px solid #FFF;
+    } 
+
+    .leagues a img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .ligor:nth-child(1) {
+        position: absolute;
+        top: 5%;
+    }
+    
+    .ligor:nth-child(2) {
+        position: absolute;
+        top: 5%;
+        right: 0;
+    }
+    .ligor:nth-child(3) {
+        position: absolute;
+        top: 35%;
+        right: 60%;
+        
+    }
+    .ligor:nth-child(4) {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+    
+    }
+    .ligor:nth-child(5) {
+        position: absolute;
+        top: 60%;
+        right: 40%;
+    }
+    
+}
