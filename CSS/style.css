@@ -1,0 +1,56 @@
+* {
+    margin: 0; /* Delete the default margin on the page */
+    padding: 0; /* Delete the default padding on the page */
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: rgb(242, 242 , 242);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    border: 1px solid #000;
+    width: 100vw; /* take the 100% of viewport width of the page */
+    display: flex; /* putting everything in a row in a default mode */
+    justify-content: space-between; /* put space between the elements */
+    align-items: center; /* put elements in the center of the header */
+    position: relative; 
+    padding: 10px; /* making space inside the header */
+    font-size: 20px;
+    background: #111120d4;
+}
+
+a {
+    text-decoration: none; /* Remove the lines under the links */ 
+}
+
+header .logo {
+    color: #09caf1c4;
+    font-weight: 1000; /* making the text bolder */
+    font-style: italic;
+    text-transform: uppercase;
+    padding-left: 20px; /* Moving 20 pixels to the left of the header */
+}
+
+
+header .logo:hover {
+    transform: translate(-2px, -2px); /*moving -2px on both Y and X axels while putting the pointer on the logo */
+    color: #fff; 
+}
+
+header .nav li {
+    display: inline-block; /* put all the nav links in a row */
+    text-transform: uppercase; 
+}
+header .nav li a {
+    color: #fff;
+    margin: 35px; /*adding space between the nav links */
+}
+
+header .nav li a:hover {
+    color: #09caf1c4;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ad0808;
+}
+
