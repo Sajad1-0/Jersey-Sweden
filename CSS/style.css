@@ -20,10 +20,7 @@ header {
     position: relative; 
     padding: 10px; /* making space inside the header */
     font-size: 20px;
-    background: url(/Images/Data-background.jpg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: #000;
 }
 
 a {
@@ -57,4 +54,14 @@ header .nav li a:hover {
     color: #09caf1c4;
     font-size: 1.2rem;
     border-bottom: 1px solid #ad0808;
+}
+
+
+.text {
+    background: url(/Images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
 }
