@@ -15,10 +15,15 @@ header {
     display: flex; /* putting everything in a row in a default mode */
     justify-content: space-between; /* put space between the elements */
     align-items: center; /* put elements in the center of the header */
+    flex-wrap: wrap;
+    gap: 5px;
     position: relative; 
     padding: 10px; /* making space inside the header */
     font-size: 20px;
-    background: #111120d4;
+    background: url(/Images/Data-background.jpg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 a {
@@ -53,4 +58,3 @@ header .nav li a:hover {
     font-size: 1.2rem;
     border-bottom: 1px solid #ad0808;
 }
-
