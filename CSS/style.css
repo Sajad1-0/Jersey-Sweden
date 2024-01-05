@@ -7,10 +7,10 @@
 body {
     background-color: rgb(242, 242 , 242);
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden; /* Hide the overflow of content */
 }
 
 header {
-    border: 1px solid #000;
     width: 100vw; /* take the 100% of viewport width of the page */
     display: flex; /* putting everything in a row in a default mode */
     justify-content: space-between; /* put space between the elements */
@@ -18,7 +18,9 @@ header {
     position: relative; 
     padding: 10px; /* making space inside the header */
     font-size: 20px;
-    background: #111120d4;
+    background: url(/Images/header.jpg);
+    background-position: bottom; 
+    background-size:cover; /* it stretch the background to cover the whole width of header */
 }
 
 a {
@@ -26,10 +28,11 @@ a {
 }
 
 header .logo {
-    color: #09caf1c4;
+    color: #259cd7;
     font-weight: 1000; /* making the text bolder */
     font-style: italic;
     text-transform: uppercase;
+    transition: 0.3s;
     padding-left: 20px; /* Moving 20 pixels to the left of the header */
 }
 
@@ -37,6 +40,7 @@ header .logo {
 header .logo:hover {
     transform: translate(-2px, -2px); /*moving -2px on both Y and X axels while putting the pointer on the logo */
     color: #fff; 
+    letter-spacing: 3px;
 }
 
 header .nav li {
@@ -45,12 +49,105 @@ header .nav li {
 }
 header .nav li a {
     color: #fff;
-    margin: 35px; /*adding space between the nav links */
+    padding: 35px; /*adding space between the nav links */
+    transition: 0.3s;
 }
 
 header .nav li a:hover {
-    color: #09caf1c4;
+    color: #259cd7;
     font-size: 1.2rem;
-    border-bottom: 1px solid #ad0808;
+    letter-spacing: 3px;
+    font-weight: 500; /* makes the text bolder when the pointer is moved on them */
 }
 
+header .inloggning a {
+    color: #fff;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+header .inloggning a:hover {
+    color: #259cd7;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.text {
+    height: 100vh; /* takes the whole hieght of the page */
+    width: 100vw; /* takes the whole width of the page */
+    background: url(/Images/dark-Background.jpg);
+    background-position: center; /* It places the background in the center of the page */
+    position: relative;
+}
+
+.text h3 {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.text p {
+    position: absolute;
+    top: 15%;
+    left: 21%;
+    padding-top: 10px;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+strong {
+    color: #259cd7;
+    text-transform: uppercase;
+}
+
+.text a {
+    color: #111;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 30%;
+    left: 41%;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.text a:hover {
+    letter-spacing: 10px;
+    color: #fff;
+    background-color: #259cd7;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 10%;
+    left: 43.5%;
+    display: flex;
+}
+
+.social-icons li {
+    list-style: none;
+
+}
+
+.social-icons li a {
+    display: inline-block;
+    margin-right: 25px;
+    transform: scale(0.5); /* decrease the size of the logos by 0.5% */
+    transition: 0.5s;
+    font-size: 4rem;
+    color: #fff;
+}
+
+.social-icons li a:hover {
+    transform: scale(0.5) translateY(-20px);
+    color: #259cd7;
+}
