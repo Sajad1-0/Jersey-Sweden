@@ -15,12 +15,15 @@ header {
     display: flex; /* putting everything in a row in a default mode */
     justify-content: space-between; /* put space between the elements */
     align-items: center; /* put elements in the center of the header */
+    flex-wrap: wrap;
+    gap: 5px;
     position: relative; 
     padding: 10px; /* making space inside the header */
     font-size: 20px;
     background: url(/Images/header.jpg);
     background-position: bottom; 
     background-size:cover; /* it stretch the background to cover the whole width of header */
+
 }
 
 a {
@@ -59,6 +62,7 @@ header .nav li a:hover {
     letter-spacing: 3px;
     font-weight: 500; /* makes the text bolder when the pointer is moved on them */
 }
+
 
 header .inloggning a {
     color: #fff;
@@ -151,3 +155,14 @@ strong {
     transform: scale(0.5) translateY(-20px);
     color: #259cd7;
 }
+
+
+.text {
+    background: url(/Images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
