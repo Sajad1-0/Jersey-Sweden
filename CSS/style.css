@@ -86,10 +86,10 @@ header .inloggning a:hover {
 }
 
 .text h3 {
-    position: absolute;
+    position: absolute; /* it adapts it's position to the parent position */
     top: 10%;
     left: 20%;
-    font-size: 3rem;
+    font-size: 3rem; 
     color: #fff;
     text-transform: uppercase;
 }
@@ -156,7 +156,66 @@ strong {
     color: #259cd7;
 }
 
-/* Anpassad till mobiler som har max-width på 600px */
+
+
+
+/* Responsive design for tablets and enhets with max-width 900px */
+
+@media only screen and (max-width: 900px) {
+    header {
+        background: url(/Images/dark-Background.jpg);
+        background-position: top;
+        background-size: auto;
+    }
+
+    header .logo {
+        padding:0 0 1rem 20rem; /* making space for both bottom and the left side of the logo */
+    }
+
+    header .nav li {
+        padding: 0 0 0.5rem 4rem;
+    }
+
+    header .inloggning {
+        padding-left: 20rem;
+    }
+
+    .text {
+        background-position:45%; 
+        background-size: cover;
+    }
+
+    .text h3 {
+        font-size: 2rem;
+        max-width: 400px; /* gives less width than the whole text content */
+        text-align: center; /* It locates the text content in center */
+        position: absolute;
+        top: 2rem;
+        left: 15rem;
+    }
+
+    .text p {
+        text-align: center;
+        font-size: 1.2rem;
+        padding:2rem 11rem 0 0;
+    }
+
+    .text a {
+        font-size: 1.5rem;
+        position: absolute;
+        left: 21rem;
+    }
+    .text a:hover {
+        letter-spacing: 5px;
+    }
+
+    .social-icons {
+        bottom: 4rem;
+        left: 23.5rem;
+    }
+}
+
+/* responsiv design for phones with max-width 600px */
 @media only screen and (max-width: 600px) {
     header {
         background: url(/Images/dark-Background.jpg);
@@ -169,7 +228,7 @@ strong {
     }
 
     header .nav li {
-        padding: 0 0 0.5rem 0.5rem;
+        padding: 0 0 0.5rem 0;
     }
 
     header .inloggning {
@@ -187,6 +246,7 @@ strong {
         text-align: center; /* It locates the text content in center */
         position: absolute;
         top: 2rem;
+        left: 8rem;
     }
 
     .text p {
@@ -197,12 +257,14 @@ strong {
     .text a {
         font-size: 1.5rem;
         position: absolute;
-        left: 13rem;
+        left: 12rem;
     }
     .text a:hover {
         letter-spacing: 5px;
     }
 
-    
+    .social-icons {
+        bottom: 7%;
+        left: 40%;
+    }
 }
-
