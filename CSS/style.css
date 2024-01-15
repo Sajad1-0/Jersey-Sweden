@@ -30,6 +30,7 @@ a {
     text-decoration: none; /* Remove the lines under the links */ 
 }
 
+
 header .logo {
     color: #259cd7;
     font-weight: 1000; /* making the text bolder */
@@ -74,7 +75,7 @@ header .inloggning a:hover {
     color: #259cd7;
     font-size: 1.2rem;
     font-weight: 500;
-    letter-spacing: 3px;f
+    letter-spacing: 3px;
 }
 
 .text {
@@ -159,9 +160,9 @@ strong {
 
 
 
-/* Responsive design for tablets and enhets with max-width 900px */
+/* Responsive design for tablets and devices with max-width 992px */
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
     header {
         background: url(/Images/dark-Background.jpg);
         background-position: top;
@@ -177,7 +178,7 @@ strong {
     }
 
     header .inloggning {
-        padding-left: 20rem;
+        padding-left: 21rem;
     }
 
     .text {
@@ -191,19 +192,19 @@ strong {
         text-align: center; /* It locates the text content in center */
         position: absolute;
         top: 2rem;
-        left: 15rem;
+        left: 17rem;
     }
 
     .text p {
         text-align: center;
         font-size: 1.2rem;
-        padding:2rem 11rem 0 0;
+        padding:2rem 15rem 0 0;
     }
 
     .text a {
         font-size: 1.5rem;
         position: absolute;
-        left: 21rem;
+        left: 24rem;
     }
     .text a:hover {
         letter-spacing: 5px;
@@ -211,12 +212,12 @@ strong {
 
     .social-icons {
         bottom: 4rem;
-        left: 23.5rem;
+        left: 26rem;
     }
 }
 
 /* responsiv design for phones with max-width 600px */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     header {
         background: url(/Images/dark-Background.jpg);
         background-position: top;

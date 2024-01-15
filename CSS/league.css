@@ -91,19 +91,76 @@ header .inloggning a:hover {
 }
 
 .leagues a {
-    color: #fff;
+    color: #191A19;
     text-align: center;
+    font-size: 1.5rem;
     transition: 1s;
+    
 }
 
-
+.leagues a:hover {
+    color: #fff;
+    letter-spacing: 4px;
+    font-style: italic;
+}
 
 .leagues a img {
     width: 600px;
     height: 300px;
-    border-bottom: 2px solid #259cd7; /* border just in the bottom of the every image */
-    border-radius: 50px;
-    padding: 5px;
+    border-radius: 50px; /* giving curved corners to the images */
+    padding: 40px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 10px #259cd7; /* adding shadow around the content */
+    transition: 0.5s; 
 }
 
+.leagues a img:hover {
+    background-color: #259cd7; /*white background while pointing on the images */
+    transform: translate(20px, -20px); /* move up the image while pointing on it */ 
+}
+/* Responsive design for tablets and devices with max-width 992px */
+@media (width <= 992px) {
+   
+    header .logo {
+        padding:0 0 1rem 21rem; /* making space for both bottom and the left side of the logo */
+    }
 
+    header .nav li {
+        padding: 0 0 0.5rem 5rem;
+    }
+
+    header .inloggning {
+        padding-left: 22rem;
+    }
+}
+
+/* Responsive design for devices that are smaller och equal to 600px width */
+@media (width <= 600px) {
+    
+    header .logo {
+        padding:0 0 1rem 10rem; /* making space for both bottom and the left side of the logo */
+    }
+
+    header .nav li {
+        padding: 0 0 0.5rem 0;
+    }
+
+    header .inloggning {
+        padding-left: 11rem;
+    }
+
+    .leagues a img {
+        width: 400px;
+        height: 220px;
+    }
+     /* Giving design while clicking on the links and images */
+    .leagues a:active {
+        color: #fff;
+        letter-spacing: 4px;
+        font-style: italic;
+    }
+
+    .leagues a img:active {
+        background-color: #259cd7;
+    }
+}
