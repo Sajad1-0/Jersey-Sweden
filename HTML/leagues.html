@@ -5,55 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sajjad Ghaderi">
     <title>Fc Jersys Sweden</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/CSS/league.css">
     <!--Font awesome icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <header> 
-            <a href="home.html" class="logo">FC Jerseys Sweden</a> <!-- the logo will always navigate the user to home page -->
-            <div class="toggle"></div>  <!-- Here users can see the navigation links -->
-            <!-- This will navigate users to sign up och login -->
-            <a href="HTML/login.html" class="logga">Logga in</a>
-            <a href="HTML/signup.html" class="sign">Sign up</a>
-        </header>
-    </div>
-   
+    <header>
+        <!-- the logo always navigate the users to main page -->
+        <a href="/HTML/home.html" class="logo">FC Jerseys Sweden</a>
+        <ul class="nav"> <!-- Here will be navigation links -->
+            <li><a href="/HTML/home.html">Hem</a></li>
+            <li><a href="/HTML/leagues.html">Ligor</a></li>
+            <li><a href="/HTML/contact.html">Kontakt</a></li>
+            <li><a href="/HTML/about.html">om</a></li>
+        </ul>
+        <!-- This will navigate users to sign up or login -->
+        <div class="inloggning">
+        <a href="/HTML/login.html" target="_blank" class="logIn">Logga in</a>
+        <a href="/HTML/signup.html" target="_blank" class="signUp">Sign up</a>
+        </div>
+    </header>
+   <!-- all leagues are inside the main content -->
     <main class="leagues">
+        <!-- English league aka Primier League -->
             <a class="ligor" href="Leagues/primierleague.html">
-                <img  src="Images/leagues/PrimierLeague.jpg" 
-                alt="Primier League logo" width="300px" height="270px"><br>
-                Primier League</a>
-
+                <img  src="/Images/leagues/PrimierLeague.jpg"  
+                alt="Primier League logo">
+                <br>Primier League</a>
+        <!-- Spanish league aka La Liga  -->
             <a class="ligor" href="Leagues/laliga.html">
-                <img src="Images/leagues/laliga.jpg" alt="Laliga logo"
-                width="300px" height="280px"><br>La Liga</a>
-            
+                <img src="/Images/leagues/laliga.jpg" alt="Laliga logo" >
+                <br>La Liga</a>
+        <!-- Italian league aka Seria A -->
             <a class="ligor" href="Leagues/seriea.html">
-                <img src="Images/leagues/seriaa.jpg" alt="Serie A logo"
-                width="300px" height="270px"><br>
-                Serie A</a>
-
+                <img src="/Images/leagues/seriaa.jpg" alt="Serie A logo">
+                <br>Serie A</a>
+        <!-- French League aka Ligue 1 -->
             <a class="ligor" href="Leagues/ligue1.html">
-                <img src="Images/leagues/ligue1.jpg"
-                 alt="Ligue 1 logo" width="300px" heigth="300px"><br>Ligue 1</a>
-
+                <img src="/Images/leagues/ligue1.jpg" alt="Ligue 1 logo">
+                <br>Ligue 1</a>
+        <!-- International teams -->
             <a class="ligor" href="Leagues/international.html">
-                <img src="Images/leagues/International.jpg" 
-                alt="World cup logo" width="300px"><br>
-                international</a>
+                <img src="/Images/leagues/International.jpg" 
+                alt="Fifa logo" width="600px">
+                <br>international</a>
     </main>
 
-    <nav class="menu">
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="teams.html">Teams</a></li>
-            <li><a href="HTML/contact.html">Contacts</a></li>
-            <li><a href="HTML/about.html">About</a></li>
-        </ul>
-    </nav>
 
-    <script src="script.js"></script>
+    <script src="/Script/script.js"></script>
 </body>
 </html>

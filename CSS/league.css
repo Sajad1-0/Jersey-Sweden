@@ -1,0 +1,109 @@
+* {
+    margin: 0; /* Delete the default margin on the page */
+    padding: 0; /* Delete the default padding on the page */
+    box-sizing: border-box; 
+}
+
+body {
+    background-color:#191A19;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden; /* Hide the overflow of content at X axis */
+}
+
+header {
+    width: 100vw; /* take the 100% of viewport width of the page */
+    display: flex; /* putting everything in a row in a default mode */
+    justify-content: space-between; /* put space between the elements */
+    align-items: center; /* put elements in the center of the header */
+    flex-wrap: wrap;
+    gap: 5px;
+    position: relative; 
+    padding: 10px; /* making space inside the header */
+    font-size: 20px;
+    background: #191A19;
+    background-position: bottom; 
+    background-size:cover; /* it stretch the background to cover the whole width of header */
+    
+}
+
+a {
+    text-decoration: none; /* Remove the lines under the links */ 
+}
+
+header .logo {
+    color: #259cd7;
+    font-weight: 1000; /* making the text bolder */
+    font-style: italic;
+    text-transform: uppercase;
+    transition: 0.3s;
+    padding-left: 20px; /* Moving 20 pixels to the left of the header */
+}
+
+
+header .logo:hover {
+    transform: translate(-2px, -2px); /*moving -2px on both Y and X axels while putting the pointer on the logo */
+    color: #fff; 
+    letter-spacing: 3px;
+}
+
+header .nav li {
+    display: inline-block; /* put all the nav links in a row */
+    text-transform: uppercase; 
+}
+header .nav li a {
+    color: #fff;
+    padding: 35px; /*adding space between the nav links */
+    transition: 0.3s;
+}
+
+header .nav li a:hover {
+    color: #259cd7;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    font-weight: 500; /* makes the text bolder when the pointer is moved on them */
+}
+
+
+header .inloggning a {
+    color: #fff;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+header .inloggning a:hover {
+    color: #259cd7;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.leagues {
+    width: 100%; /* takes 100% of the page width */
+    height: 100%; /* takes 100% of the page height */
+    background: #191A19; /* dark background color */
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 100px 50px ; /* padding top an bottom by 100px and two sides by 50px */
+    position: relative;
+}
+
+.leagues a {
+    color: #fff;
+    text-align: center;
+    transition: 1s;
+}
+
+
+
+.leagues a img {
+    width: 600px;
+    height: 300px;
+    border-bottom: 2px solid #259cd7; /* border just in the bottom of the every image */
+    border-radius: 50px;
+    padding: 5px;
+}
+
+
