@@ -119,7 +119,7 @@ header .inloggning a:hover {
     transform: translate(20px, -20px); /* move up the image while pointing on it */ 
 }
 /* Responsive design for tablets and devices with max-width 992px */
-@media (width <= 992px) {
+@media (max-width: 992px) {
    
     header .logo {
         padding:0 0 1rem 21rem; /* making space for both bottom and the left side of the logo */

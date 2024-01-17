@@ -7,11 +7,10 @@
 body {
     background-color:#191A19;
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden; /* Hide the overflow of content at X axis*/
+    
 }
 
 header {
-    width: 100vw; /* take the 100% of viewport width of the page */
     display: flex; /* putting everything in a row in a default mode */
     justify-content: space-between; /* put space between the elements */
     align-items: center; /* put elements in the center of the header */
@@ -47,17 +46,25 @@ header .logo:hover {
     letter-spacing: 3px;
 }
 
-header .nav li {
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.nav li {
     display: inline-block; /* put all the nav links in a row */
     text-transform: uppercase; 
 }
-header .nav li a {
+
+.nav a {
     color: #fff;
-    padding: 35px; /*adding space between the nav links */
+    
+     /*adding space between the nav links */
     transition: 0.3s;
 }
 
-header .nav li a:hover {
+.nav a:hover {
     color: #259cd7;
     font-size: 1.2rem;
     letter-spacing: 3px;
@@ -65,13 +72,13 @@ header .nav li a:hover {
 }
 
 
-header .inloggning a {
+.inloggning a {
     color: #fff;
     padding: 15px;
     transition: 0.3s;
 }
 
-header .inloggning a:hover {
+.inloggning a:hover {
     color: #259cd7;
     font-size: 1.2rem;
     font-weight: 500;
@@ -80,25 +87,20 @@ header .inloggning a:hover {
 
 .text {
     height: 100vh; /* takes the whole hieght of the page */
-    width: 100vw; /* takes the whole width of the page */
     background: url(/Images/dark-Background.jpg);
     background-position: center; /* It places the background in the center of the page */
     position: relative;
 }
 
 .text h3 {
-    position: absolute; /* it adapts it's position to the parent position */
-    top: 10%;
-    left: 20%;
+    
     font-size: 3rem; 
     color: #fff;
     text-transform: uppercase;
 }
 
 .text p {
-    position: absolute;
-    top: 15%;
-    left: 21%;
+    
     padding-top: 10px;
     color: #fff;
     font-size: 1.1rem;
@@ -161,111 +163,3 @@ strong {
 
 
 /* Responsive design for tablets and devices with max-width 992px */
-
-@media screen and (max-width: 992px) {
-    header {
-        background: url(/Images/dark-Background.jpg);
-        background-position: top;
-        background-size: auto;
-    }
-
-    header .logo {
-        padding:0 0 1rem 20rem; /* making space for both bottom and the left side of the logo */
-    }
-
-    header .nav li {
-        padding: 0 0 0.5rem 4rem;
-    }
-
-    header .inloggning {
-        padding-left: 21rem;
-    }
-
-    .text {
-        background-position:45%; 
-        background-size: cover;
-    }
-
-    .text h3 {
-        font-size: 2rem;
-        max-width: 400px; /* gives less width than the whole text content */
-        text-align: center; /* It locates the text content in center */
-        position: absolute;
-        top: 2rem;
-        left: 17rem;
-    }
-
-    .text p {
-        text-align: center;
-        font-size: 1.2rem;
-        padding:2rem 15rem 0 0;
-    }
-
-    .text a {
-        font-size: 1.5rem;
-        position: absolute;
-        left: 24rem;
-    }
-    .text a:hover {
-        letter-spacing: 5px;
-    }
-
-    .social-icons {
-        bottom: 4rem;
-        left: 26rem;
-    }
-}
-
-/* responsiv design for phones with max-width 600px */
-@media screen and (max-width: 600px) {
-    header {
-        background: url(/Images/dark-Background.jpg);
-        background-position: top;
-        background-size: auto;
-    }
-
-    header .logo {
-        padding:0 0 1rem 10rem; /* making space for both bottom and the left side of the logo */
-    }
-
-    header .nav li {
-        padding: 0 0 0.5rem 0;
-    }
-
-    header .inloggning {
-        padding-left: 11rem;
-    }
-
-    .text {
-        background-position:45%; 
-        background-size: cover;
-    }
-
-    .text h3 {
-        font-size: 2rem;
-        max-width: 350px; /* gives less width than the whole text content */
-        text-align: center; /* It locates the text content in center */
-        position: absolute;
-        top: 2rem;
-        left: 8rem;
-    }
-
-    .text p {
-        text-align: center;
-        padding:2rem 8rem 0 0;
-    }
-
-    .text a {
-        font-size: 1.5rem;
-        position: absolute;
-        left: 12rem;
-    }
-    .text a:hover {
-        letter-spacing: 5px;
-    }
-
-    .social-icons {
-        bottom: 7%;
-        left: 40%;
-    }
-}
