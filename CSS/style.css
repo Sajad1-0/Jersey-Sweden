@@ -11,17 +11,13 @@ body {
 }
 
 header {
-    display: flex; /* putting everything in a row in a default mode */
-    justify-content: space-between; /* put space between the elements */
-    align-items: center; /* put elements in the center of the header */
-    flex-wrap: wrap;
-    gap: 5px;
-    position: relative; 
-    padding: 10px; /* making space inside the header */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 2px; /* making space inside the header */
     font-size: 20px;
-    background: url(/Images/header.jpg);
-    background-position: bottom; 
-    background-size:cover; /* it stretch the background to cover the whole width of header */
+    background: url(/Images/dark-Background.jpg);
 
 }
 
@@ -30,17 +26,17 @@ a {
 }
 
 
-header .logo {
+.logo {
+    width: 600px;
     color: #259cd7;
     font-weight: 1000; /* making the text bolder */
     font-style: italic;
     text-transform: uppercase;
     transition: 0.3s;
-    padding-left: 20px; /* Moving 20 pixels to the left of the header */
 }
 
 
-header .logo:hover {
+ .logo:hover {
     transform: translate(-2px, -2px); /*moving -2px on both Y and X axels while putting the pointer on the logo */
     color: #fff; 
     letter-spacing: 3px;
@@ -52,16 +48,14 @@ header .logo:hover {
     width: 100%;
 }
 
-.nav li {
-    display: inline-block; /* put all the nav links in a row */
-    text-transform: uppercase; 
+li {
+    list-style: none; /* Remove dottes of the list */
 }
 
 .nav a {
     color: #fff;
-    
-     /*adding space between the nav links */
     transition: 0.3s;
+    text-transform: uppercase; 
 }
 
 .nav a:hover {
@@ -71,10 +65,15 @@ header .logo:hover {
     font-weight: 500; /* makes the text bolder when the pointer is moved on them */
 }
 
+.inloggning {
+    display: flex;
+    justify-content: end;
+    width: 600px;
+}
 
 .inloggning a {
     color: #fff;
-    padding: 15px;
+    padding: 20px;
     transition: 0.3s;
 }
 
@@ -89,40 +88,49 @@ header .logo:hover {
     height: 100vh; /* takes the whole hieght of the page */
     background: url(/Images/dark-Background.jpg);
     background-position: center; /* It places the background in the center of the page */
-    position: relative;
+    background-size: cover; 
 }
 
 .text h3 {
-    
+    display: flex; 
+    justify-content: center; /* centered the text vertically */
+    text-align: center;
+    flex-wrap: wrap;
+    width: 800px; 
+    margin: auto; /* center the text */
+    padding-top: 50px; 
     font-size: 3rem; 
     color: #fff;
     text-transform: uppercase;
 }
 
 .text p {
-    
-    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
     color: #fff;
     font-size: 1.1rem;
 }
-
+/*Styling logo name */
 strong {
     color: #259cd7;
     text-transform: uppercase;
+    padding: 0 5px; /* space between two sides of the text */
 }
 
 .text a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
     color: #111;
     background: #fff;
     border-radius: 5px;
     font-size: 2rem;
-    font-weight: 500;
     padding: 10px 30px;
-    margin-top: 10px;
+    margin: 25rem auto;
     letter-spacing: 2px;
-    position: absolute;
-    bottom: 30%;
-    left: 41%;
     text-transform: uppercase;
     transition: 0.3s;
 }
@@ -131,13 +139,15 @@ strong {
     letter-spacing: 10px;
     color: #fff;
     background-color: #259cd7;
+    width: 300px;
 }
 
 .social-icons {
-    position: absolute;
-    bottom: 10%;
-    left: 43.5%;
     display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 80%;
+    left: 47%;
 }
 
 .social-icons li {
@@ -147,7 +157,7 @@ strong {
 
 .social-icons li a {
     display: inline-block;
-    margin-right: 25px;
+    margin-right: auto;
     transform: scale(0.5); /* decrease the size of the logos by 0.5% */
     transition: 0.5s;
     font-size: 4rem;
@@ -163,3 +173,80 @@ strong {
 
 
 /* Responsive design for tablets and devices with max-width 992px */
+@media screen and (max-width: 992px) {  
+
+    body {
+        overflow: hidden;
+    }
+    
+    header {
+        display: inline-block;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .nav {
+        padding-top: 15px;
+    }
+
+    .inloggning {
+        justify-content: center;
+        margin: auto;
+    }
+
+    .text {
+        background-position: 45%;
+    }
+
+    .text h3 {
+        font-size: 2rem;
+        width: 600px;
+    }
+
+    .text a {
+        width: 200px;
+        font-size:1.5rem;
+    }
+
+    .text a:hover {
+        letter-spacing: 5px;
+        width: 220px;
+    }
+
+    .social-icons {
+        top: 85%;
+        left: 45%;
+    }
+
+    
+}
+
+/* Responsive style for mobilephones max-width 600px */
+@media screen and (max-width: 600px) {
+
+    body {
+        overflow: hidden;
+    }
+    .logo {
+        padding-top: 5px;
+        margin: auto;
+    }
+
+    .text h3 {
+        font-size: 1.5rem;
+        width: 400px;
+    }
+
+    .text p {
+        padding-top: 30px;
+    }
+
+    .social-icons {
+        top: 90%;
+        left: 40%;
+    }
+}

@@ -11,18 +11,13 @@ body {
 }
 
 header {
-    width: 100vw; /* take the 100% of viewport width of the page */
-    display: flex; /* putting everything in a row in a default mode */
-    justify-content: space-between; /* put space between the elements */
-    align-items: center; /* put elements in the center of the header */
-    flex-wrap: wrap;
-    gap: 5px;
-    position: relative; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
     padding: 10px; /* making space inside the header */
     font-size: 20px;
     background: #191A19;
-    background-position: bottom; 
-    background-size:cover; /* it stretch the background to cover the whole width of header */
     
 }
 
@@ -30,47 +25,58 @@ a {
     text-decoration: none; /* Remove the lines under the links */ 
 }
 
-header .logo {
+.logo {
+    width: 600px;
     color: #259cd7;
     font-weight: 1000; /* making the text bolder */
     font-style: italic;
     text-transform: uppercase;
     transition: 0.3s;
-    padding-left: 20px; /* Moving 20 pixels to the left of the header */
 }
 
 
-header .logo:hover {
+.logo:hover {
     transform: translate(-2px, -2px); /*moving -2px on both Y and X axels while putting the pointer on the logo */
     color: #fff; 
     letter-spacing: 3px;
 }
 
-header .nav li {
-    display: inline-block; /* put all the nav links in a row */
-    text-transform: uppercase; 
-}
-header .nav li a {
-    color: #fff;
-    padding: 35px; /*adding space between the nav links */
-    transition: 0.3s;
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
-header .nav li a:hover {
+li {
+    list-style: none;
+}
+
+.nav a {
+    color: #fff;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.nav a:hover {
     color: #259cd7;
     font-size: 1.2rem;
     letter-spacing: 3px;
     font-weight: 500; /* makes the text bolder when the pointer is moved on them */
 }
 
+.inloggning {
+    display: flex;
+    justify-content: end;
+    width: 600px;
+}
 
-header .inloggning a {
+.inloggning a {
     color: #fff;
-    padding: 15px;
+    padding: 20px;
     transition: 0.3s;
 }
 
-header .inloggning a:hover {
+.inloggning a:hover {
     color: #259cd7;
     font-size: 1.2rem;
     font-weight: 500;
@@ -80,21 +86,20 @@ header .inloggning a:hover {
 .leagues {
     width: 100%; /* takes 100% of the page width */
     height: 100%; /* takes 100% of the page height */
-    background: #191A19; /* dark background color */
+    background: #191A19; /* dark background color */   
     display: flex; 
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     gap: 5px;
     padding: 100px 50px ; /* padding top an bottom by 100px and two sides by 50px */
-    position: relative;
 }
 
 .leagues a {
     color: #191A19;
     text-align: center;
     font-size: 1.5rem;
-    transition: 1s;
+    transition: 1s; /* it takes 1 second to change the styles */
     
 }
 
@@ -121,46 +126,49 @@ header .inloggning a:hover {
 /* Responsive design for tablets and devices with max-width 992px */
 @media (max-width: 992px) {
    
-    header .logo {
-        padding:0 0 1rem 21rem; /* making space for both bottom and the left side of the logo */
+    body {
+        overflow-x: hidden;
     }
-
-    header .nav li {
-        padding: 0 0 0.5rem 5rem;
-    }
-
-    header .inloggning {
-        padding-left: 22rem;
-    }
-}
-
-/* Responsive design for devices that are smaller och equal to 600px width */
-@media (width <= 600px) {
     
-    header .logo {
-        padding:0 0 1rem 10rem; /* making space for both bottom and the left side of the logo */
+    header {
+        display: inline-block;
     }
 
-    header .nav li {
-        padding: 0 0 0.5rem 0;
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin: auto;
     }
 
-    header .inloggning {
-        padding-left: 11rem;
+    .nav {
+        padding-top: 15px;
+    }
+
+    .inloggning {
+        justify-content: center;
+        margin: auto;
     }
 
     .leagues a img {
         width: 400px;
         height: 220px;
     }
-     /* Giving design while clicking on the links and images */
-    .leagues a:active {
-        color: #fff;
-        letter-spacing: 4px;
-        font-style: italic;
+}
+
+/* Responsive design for devices that are smaller och equal to 600px width */
+@media (width <= 600px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+    .logo {
+        padding-top: 5px;
+        margin: auto;
     }
 
-    .leagues a img:active {
-        background-color: #259cd7;
+    .leagues a img {
+        width: 400px;
+        height: 220px;
     }
+    
 }
