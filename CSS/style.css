@@ -85,6 +85,9 @@ li {
 }
 
 .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh; /* takes the whole hieght of the page */
     background: url(/Images/dark-Background.jpg);
     background-position: center; /* It places the background in the center of the page */
@@ -97,7 +100,7 @@ li {
     text-align: center;
     flex-wrap: wrap;
     width: 800px; 
-    margin: auto; /* center the text */
+    
     padding-top: 50px; 
     font-size: 3rem; 
     color: #fff;
@@ -129,7 +132,7 @@ strong {
     border-radius: 5px;
     font-size: 2rem;
     padding: 10px 30px;
-    margin: 25rem auto;
+    justify-self: center;
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: 0.3s;
@@ -145,9 +148,7 @@ strong {
 .social-icons {
     display: flex;
     justify-content: center;
-    position: absolute;
-    top: 80%;
-    left: 47%;
+   
 }
 
 .social-icons li {
@@ -175,9 +176,9 @@ strong {
 /* Responsive design for tablets and devices with max-width 992px */
 @media screen and (max-width: 992px) {  
 
-    body {
+    /* body {
         overflow: hidden;
-    }
+    } */
     
     header {
         display: inline-block;
